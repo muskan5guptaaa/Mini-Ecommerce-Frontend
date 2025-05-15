@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // 👈 import useNavigate
+import { useNavigate } from "react-router-dom"; 
 
 const ProductForm = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +11,7 @@ const ProductForm = () => {
   });
 
   const [showModal, setShowModal] = useState(false);
-  const navigate = useNavigate(); // 👈 initialize navigate
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,11 +20,11 @@ const ProductForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/products", {
+      await axios.post("https://mini-ecommerce-backend-fn3m.onrender.com/api/products", {
         ...formData,
         price: parseFloat(formData.price),
       });
-      setShowModal(true); // Show modal
+      setShowModal(true); 
       setFormData({ name: "", price: "", description: "", image_url: "" });
     } catch (error) {
       console.error("Submission failed:", error);
@@ -33,7 +33,7 @@ const ProductForm = () => {
 
   const handleModalClose = () => {
     setShowModal(false);
-    navigate("/my-products"); // 👈 redirect on OK
+    navigate("/my-products"); 
   };
 
   return (
