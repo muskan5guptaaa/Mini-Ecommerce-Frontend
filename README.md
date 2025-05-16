@@ -14,9 +14,9 @@ A minimal full-stack e-commerce application that allows users to submit product 
 2. Install all dependencies:
   ```bash
   npm install
-
+```
 3.Create a .env file in the backend root with:
-  ```
+  ```bash
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 Start the backend server:
