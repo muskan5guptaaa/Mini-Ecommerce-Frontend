@@ -1,12 +1,41 @@
-# React + Vite
+# 🛒 Mini E-Commerce Product Submission App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React + Tailwind CSS based product submission app for a mini e-commerce use case. It allows users to submit product details via a form, and upon successful submission, displays a modal and redirects the user to the "My Products" page.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Technologies Used
 
-## Expanding the ESLint configuration
+- **React** for building UI components
+- **Tailwind CSS** for styling
+- **Axios** for sending HTTP requests
+- **React Router DOM** for navigation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- Product submission form with fields:
+  - Product Name
+  - Price
+  - Description
+  - Optional Image URL
+- Styled using Tailwind CSS
+- Sends product data to a backend API
+- On success:
+  - Shows a modal (Tailwind-based)
+  - Redirects user to `/my-products` on clicking **OK**
+
+---
+
+## 📤 API Request
+
+- **Endpoint**: `POST http://localhost:5000/api/products`
+- **Payload**:
+```json
+{
+  "name": "Example Product",
+  "price": 100,
+  "description": "A sample product",
+  "image_url": "https://example.com/image.jpg"
+}
