@@ -23,7 +23,8 @@ Start the backend server:
 npm start
 The backend will run at: http://localhost:5000
 ```
-💻 Frontend
+### 💻 Frontend
+
 Open terminal and go to your frontend folder:
 ```
 cd frontend
